@@ -9,6 +9,7 @@ dotenv.config();
 export const registerController = async (req: Request, res: Response) => {
   const { username, email, password, role } = req.body;
   try {
+    console.log("Register request body:", req.body);
     const hashedPassword = bcrypt.hashSync(password, 10);
     const user = new User({ username, email, password: hashedPassword, role });
     await user.save();
