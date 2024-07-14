@@ -42,8 +42,8 @@ export const loginController = async (req: Request, res: Response) => {
     );
     res.cookie("token", token, {
       httpOnly: true,
-      /* secure: true, */
-      sameSite: "strict",
+      secure: true,
+      sameSite: "none",
     });
     res.status(200).json({ message: "Login successful", role: user.role });
   } catch (error) {
