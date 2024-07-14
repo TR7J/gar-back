@@ -24,7 +24,7 @@ app.use(
   cors({
     credentials: true,
     /* origin: "http://localhost:3000", */
-    origin: "https://gar-front.vercel.app/",
+    origin: "https://gar-front.vercel.app",
   })
 );
 
